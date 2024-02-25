@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마케팅 슬로건 생성기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>마케팅 슬로건 생성기</h1>
+    <form action="/generate" method="post">
+        <label for="target_customer">타겟 고객</label>
+        <input type="text" id="target_customer" name="target_customer" required>
+        <br>
+        <label for="product_description">제품 소개</label>
+        <textarea id="product_description" name="product_description" required></textarea>
+        <br>
+        <button type="submit">생성</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
