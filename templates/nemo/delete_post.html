@@ -1,0 +1,14 @@
+{% extends 'nemo/base.html' %}
+
+{% block title %}Delete a Post{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Delete Post</h1>
+    <p>Are you sure you want to delete this post?</p>
+    <p>{{ post.content }}</p>
+    <form method="post" action="{% url 'nemo:delete_post' post.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'nemo:index' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}

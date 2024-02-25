@@ -1,0 +1,12 @@
+{% extends 'nemo/base.html' %}
+
+{% block title %}Create a Post{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Create a Post</h1>
+    <form method="post" action="{% url 'nemo:create_post' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}
